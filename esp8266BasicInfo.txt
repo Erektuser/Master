@@ -1,0 +1,9 @@
+vccc -> 3.3v
+gnd -> gnd 
+rst ->3.3kohm -> vcc
+ch_pd ->3.3kohm -> vcc
+tx->rx
+rx->tx
+gpio0 -> gnd (programming mode)
+gpio2 -> free
+gnd->gnd 
