@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".test">
+
+    <TextView
+        android:id="@+id/textView_angle_left"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="0°"
+        app:layout_constraintEnd_toStartOf="@+id/textView_strength_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_angle_right"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView_y1"
+        android:layout_width="50dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="8dp"
+        android:text="0°"
+        app:layout_constraintStart_toEndOf="@+id/textView_strength_right"
+        app:layout_constraintTop_toBottomOf="@+id/textView_x1"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView_x1"
+        android:layout_width="52dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginTop="8dp"
+        android:text="0°"
+        app:layout_constraintEnd_toStartOf="@+id/textView_x2"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView_y2"
+        android:layout_width="47dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="0°"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView_y1"
+        app:layout_constraintTop_toBottomOf="@+id/textView_x2"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView_x2"
+        android:layout_width="48dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="0°"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/textView_strength_left"
+        android:layout_width="43dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/textView_angle_left"
+        android:layout_marginEnd="88dp"
+        android:layout_marginTop="16dp"
+        android:text="0%"
+        app:layout_constraintEnd_toStartOf="@+id/textView_x1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/textView_angle_right"
+        android:layout_width="32dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="0°"
+        app:layout_constraintEnd_toStartOf="@+id/textView_strength_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/textView_strength_right"
+        android:layout_width="35dp"
+        android:layout_height="34dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView_angle_right"
+        android:layout_marginTop="8dp"
+        android:text="0%"
+        app:layout_constraintTop_toBottomOf="@+id/textView_strength_left"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="216dp" />
+
+
+    <io.github.controlwear.virtual.joystick.android.JoystickView xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/joystickView_left"
+        android:layout_width="175dp"
+        android:layout_height="167dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp"
+        custom:JV_backgroundColor="#009688"
+        custom:JV_borderColor="#00796B"
+        custom:JV_borderWidth="8dp"
+        custom:JV_buttonColor="#FF6E40"
+        custom:layout_constraintBottom_toBottomOf="parent"
+        custom:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <io.github.controlwear.virtual.joystick.android.JoystickView xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/joystickView_right"
+        android:layout_width="175dp"
+        android:layout_height="167dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        custom:JV_backgroundColor="#009688"
+        custom:JV_borderColor="#00796B"
+        custom:JV_borderWidth="8dp"
+        custom:JV_buttonColor="#FF6E40"
+        custom:layout_constraintBottom_toBottomOf="parent"
+        custom:layout_constraintEnd_toStartOf="@+id/joystickView_left"
+        custom:layout_constraintHorizontal_bias="0.923"
+        custom:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+</android.support.constraint.ConstraintLayout>
