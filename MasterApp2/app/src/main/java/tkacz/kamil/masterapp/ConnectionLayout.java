@@ -21,7 +21,7 @@ import java.net.URL;
 public class ConnectionLayout extends AppCompatActivity {
 
     EditText editIp;
-    Button btnOn, btnOff;
+    Button btnOn, btnOff, btnconnection;
     TextView textInfo1, textInfo2, textInfo3;
 
     @Override
@@ -30,15 +30,21 @@ public class ConnectionLayout extends AppCompatActivity {
         setContentView(R.layout.activity_connection_layout);
 
         editIp = (EditText)findViewById(R.id.ip);
+        //btnconnection = (Button)findViewById(R.id.bconnect);
         btnOn = (Button)findViewById(R.id.bon);
         btnOff = (Button)findViewById(R.id.boff);
         textInfo1 = (TextView)findViewById(R.id.info1);
         textInfo2 = (TextView)findViewById(R.id.info2);
         textInfo3 = (TextView)findViewById(R.id.info3);
 
+
+
         btnOn.setOnClickListener(btnOnOffClickListener);
         btnOff.setOnClickListener(btnOnOffClickListener);
+        //btnconnection.setOnClickListener(btnConnection);
     }
+
+
     View.OnClickListener btnOnOffClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -49,8 +55,8 @@ public class ConnectionLayout extends AppCompatActivity {
             btnOn.setEnabled(false);
             btnOff.setEnabled(false);
 
-            String serverIP = editIp.getText().toString() + onoff;
-
+            //String serverIP = editIp.getText().toString() + onoff;
+            String serverIP = "192.168.0.249:8080"+onoff;
             TaskEsp taskEsp = new TaskEsp(serverIP);
             taskEsp.execute();
         }
@@ -70,12 +76,12 @@ public class ConnectionLayout extends AppCompatActivity {
 
             final String p = "http://" + server;
 
-            runOnUiThread(new Runnable() {
+/*              runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
                     textInfo1.setText(p);
                 }
-            });
+            });*/
 
             String serverResponse = "";
 

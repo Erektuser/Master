@@ -19,7 +19,7 @@ public class MasterTitleLayout extends AppCompatActivity {
             @Override
             public void onClick(View view){
 
-                Intent in2 = new Intent(MasterTitleLayout.this, test.class);
+                Intent in2 = new Intent(MasterTitleLayout.this, ConnectionLayout.class);
                 startActivity(in2);
             }
 
